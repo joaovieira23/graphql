@@ -1,4 +1,4 @@
-const { usuarios, proximoId } = require('../data/db');
+const { usuarios, proximoId } = require('../../data/db');
 
 function indiceUsuario(filtro) {
   if(!filtro) return -1
@@ -6,9 +6,9 @@ function indiceUsuario(filtro) {
   const { id, email } = filtro
 
   if(id) {
-    return usuarios.findIndex(u => u.id === id)
+    return usuarios.findIndex(p => p.id === id)
   } else if(email) {
-    return usuarios.findIndex(u => u.email === email)
+    return usuarios.findIndex(p => p.email === email)
   }
 
   return -1
